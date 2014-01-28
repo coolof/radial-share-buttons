@@ -1,0 +1,139 @@
+/* Class the js is looking for, should be relative, absolute or fixed position */
+.rsb {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Our trigger, should be relative if we want our share buttons to disappear behind it */
+.rsb-trigger {
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid rgba(0,0,0,0.5);
+  background: #fff url(share@2x.png) no-repeat center center;
+  background-size: 18px 27px;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+
+/* Button wrapper, makes our markup look tidier */
+.rsb-buttons {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+/* Actual button */
+.rsb-buttons a {
+  -webkit-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+  -webkit-transform-origin: top left;
+  box-sizing: border-box;
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  text-indent: -2000px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  z-index: 5;
+}
+
+
+/* Define transition delay. Seems reversed? Yes, these trigger when we hide the buttons (not have the class open anymore) */
+.rsb-buttons a:nth-child(1) {
+  -webkit-transition-delay: 0.2s;
+}
+.rsb-buttons a:nth-child(2) {
+  -webkit-transition-delay: 0.15s;
+}
+.rsb-buttons a:nth-child(3) {
+  -webkit-transition-delay: 0.1s;
+}
+.rsb-buttons a:nth-child(4) {
+  -webkit-transition-delay: 0.05s;
+}
+.rsb-buttons a:nth-child(5) {
+  -webkit-transition-delay: 0s;
+}
+
+
+/* Open Sesame! */
+.rsb.open .rsb-buttons a {
+  opacity: 1;
+}
+
+.rsb.open .rsb-buttons a:hover {
+  border-color: rgba(0,0,0,0.75);
+  width: 45px;
+  height: 45px;
+}
+
+/* Delay when the buttons are shown, now in right order! */
+.rsb.open .rsb-buttons a:nth-child(1) {
+  -webkit-transition-delay: 0s;
+}
+.rsb.open .rsb-buttons a:nth-child(2) {
+  -webkit-transition-delay: 0.05s;
+}
+.rsb.open .rsb-buttons a:nth-child(3) {
+  -webkit-transition-delay: 0.1s;
+}
+.rsb.open .rsb-buttons a:nth-child(4) {
+  -webkit-transition-delay: 0.15s;
+}
+.rsb.open .rsb-buttons a:nth-child(5) {
+  -webkit-transition-delay: 0.2s;
+}
+
+
+
+/* Button positions, first is top, our default */
+.rsb.open .rsb-buttons a:nth-child(1) {
+  -webkit-transform: translateX(-75px) translateY(5px);
+}
+.rsb.open .rsb-buttons a:nth-child(2) {
+  -webkit-transform: translateX(-53px) translateY(-50px);
+}
+.rsb.open .rsb-buttons a:nth-child(3) {
+  -webkit-transform: translateX(5px) translateY(-75px);
+}
+.rsb.open .rsb-buttons a:nth-child(4) {
+  -webkit-transform: translateX(63px) translateY(-50px);
+}
+.rsb.open .rsb-buttons a:nth-child(5) {
+  -webkit-transform: translateX(85px) translateY(5px);
+}
+
+
+/* Bottom */
+.rsb.open.bottom .rsb-buttons a:nth-child(1) {
+  -webkit-transform: translateX(-75px) translateY(5px);
+}
+.rsb.open.bottom .rsb-buttons a:nth-child(2) {
+  -webkit-transform: translateX(-53px) translateY(60px);
+}
+.rsb.open.bottom .rsb-buttons a:nth-child(3) {
+  -webkit-transform: translateX(5px) translateY(85px);
+}
+.rsb.open.bottom .rsb-buttons a:nth-child(4) {
+  -webkit-transform: translateX(63px) translateY(60px);
+}
+.rsb.open.bottom .rsb-buttons a:nth-child(5) {
+  -webkit-transform: translateX(85px) translateY(5px);
+}
+
+
+
+
