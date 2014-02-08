@@ -13,7 +13,11 @@
   
   <script type="text/javascript">
     $(document).ready(function() {
-      rsb();
+      var facebookShareUrl = "http://www.yay.se";
+      
+      facebookShareUrl = "http://test.se";
+          
+      rsb("bottom");
     });
   </script>
   
@@ -28,19 +32,33 @@
     
     body {
       position: relative;
-      background: #333 url(bg.jpg) no-repeat center center fixed;
-      background-size: cover;
+      background-color: #41D9B7;
+    }
+    
+    .menu {
+      padding: 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+    
+    .menu .rsb {
+      display: inline-block;
+    }
+    
+    .menu .rsb-buttons a {
+      background-color: #fff;
+      border-color: #41D9B7;
     }
   
-    .wrapper {
+    .middle {
       position: fixed;
-      padding: 200px;
+      padding: 100px;
       left: 50%;
       top: 50%;
-      margin-left: -225px;
-      margin-top: -225px;
+      margin-left: -125px;
+      margin-top: -125px;
       background-color: #fff;
-      box-shadow: 0px 3px 5px rgba(0,0,0,0.35);
+      border-radius: 50%;
     }
   </style>
   
@@ -57,7 +75,11 @@
     </ul>
   </div>-->
   
-  <div class="wrapper">
+  <div class="menu">
+    <div class="rsb"></div>
+  </div>
+  
+  <div class="middle">
     <div class="rsb"></div>
   </div>
   
