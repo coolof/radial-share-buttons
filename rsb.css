@@ -1,4 +1,7 @@
-/* Class the js is looking for, should be relative, absolute or fixed position */
+/*---------------------------------------------------------
+  Class the js is looking for.
+  Should be relative, absolute or fixed position
+---------------------------------------------------------*/
 .rsb {
   position: relative;
   left: 0;

@@ -12,7 +12,6 @@ var facebookShareUrl = globalUrl;
 var twitterShareUrl = globalUrl;
 var twitterShareMessage = globalMessage;
 var twitterUsername = "";
-var twitterShowVia = false;
 
 //Pinterest variables
 var pinterestShareUrl = globalUrl;
@@ -28,22 +27,14 @@ var emailTo = "";
 
 
 
-/* Link customization */
-/* Twitter */
-if(twitterShowVia == true) {
-  twitterUsername = "&via=" + twitterUsername;
-}
-
-
-
 var rsb = function(pos) {
   
   /* Append our html code */
   $('.rsb').append('<div class="rsb-trigger"></div><div class="rsb-buttons"><a class="facebook">Facebook</a><a class="twitter">Twitter</a><a class="pinterest">Twitter</a><a class="googleplus">Email</a><a class="email">E-mail</a></div>');
   
   
-  /* Set main class to determine where the buttons go, working values are top, left, bottom and right. Default is top, any incorrect value will return top */
-  if(pos === "bottom" | "left" | "right") {
+  /* Set main class to determine where the buttons go, working values are top, and bottom. Default is top, any incorrect value will return top */
+  if(pos === "bottom") {
     $('.rsb').addClass(pos);
   }
   else {
@@ -66,6 +57,12 @@ var rsb = function(pos) {
   $('.rsb .rsb-buttons a').css('z-index', zIndex+10);
   
   
+  /* Link customization */
+  /* Twitter */
+  if(twitterUsername != "") {
+    twitterUsername = "&via=" + twitterUsername;
+  }
+  
   
   /* Links */
   $('.rsb-buttons a:not(.email)').attr("onclick", "javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=335,width=600');return false;");
@@ -80,9 +77,9 @@ var rsb = function(pos) {
   $('.rsb-buttons .email').attr('href', "mailto:" + emailTo + "?Subject=" + emailSubject + "&Body=" + emailMessage);
   
   
-  /* Button size for future dynamicness */
-  $('.rsb-trigger').outerWidth(triggerSize).outerHeight(triggerSize);
-  $('.rsb-buttons a').outerWidth(buttonSize).outerHeight(buttonSize);
+  /* Button size for future dynamicness , not in use wright now*/
+  //$('.rsb-trigger').outerWidth(triggerSize).outerHeight(triggerSize);
+  //$('.rsb-buttons a').outerWidth(buttonSize).outerHeight(buttonSize);
   
   
   /* Do stuff! */
@@ -94,5 +91,7 @@ var rsb = function(pos) {
   
   
 };
+
+twitterUsername = "olofbrickarp";
 
 
