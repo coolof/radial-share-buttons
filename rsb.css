@@ -2,7 +2,7 @@
   Class the js is looking for.
   Should be relative, absolute or fixed position
 ---------------------------------------------------------*/
-.rsb {
+.rsb-wrapper {
   position: relative;
   left: 0;
   top: 0;
@@ -72,46 +72,46 @@
 }
 
 /* Define transition delay. Seems reversed? Yes, these trigger when we hide the buttons (not have the class open anymore) */
-.rsb-buttons a:nth-child(1) {
+.rsb-buttons a.rsb-item-1 {
   -webkit-transition-delay: 0.2s;
 }
-.rsb-buttons a:nth-child(2) {
+.rsb-buttons a.rsb-item-2 {
   -webkit-transition-delay: 0.15s;
 }
-.rsb-buttons a:nth-child(3) {
+.rsb-buttons a.rsb-item-3 {
   -webkit-transition-delay: 0.1s;
 }
-.rsb-buttons a:nth-child(4) {
+.rsb-buttons a.rsb-item-4 {
   -webkit-transition-delay: 0.05s;
 }
-.rsb-buttons a:nth-child(5) {
+.rsb-buttons a.rsb-item-5 {
   -webkit-transition-delay: 0s;
 }
 
 
 /* Open Sesame! */
-.rsb.open .rsb-buttons a {
+.rsb-wrapper.open .rsb-buttons a {
   opacity: 1;
 }
 
-.rsb.open .rsb-buttons a:hover {
+.rsb-wrapper.open .rsb-buttons a:hover {
   border-color: rgba(0,0,0,0.75);
 }
 
 /* Delay when the buttons are shown, now in correct order! */
-.rsb.open .rsb-buttons a:nth-child(1) {
+.rsb-wrapper.open .rsb-buttons a.rsb-item-1 {
   -webkit-transition-delay: 0s;
 }
-.rsb.open .rsb-buttons a:nth-child(2) {
+.rsb-wrapper.open .rsb-buttons a.rsb-item-2 {
   -webkit-transition-delay: 0.05s;
 }
-.rsb.open .rsb-buttons a:nth-child(3) {
+.rsb-wrapper.open .rsb-buttons a.rsb-item-3 {
   -webkit-transition-delay: 0.1s;
 }
-.rsb.open .rsb-buttons a:nth-child(4) {
+.rsb-wrapper.open .rsb-buttons a.rsb-item-4 {
   -webkit-transition-delay: 0.15s;
 }
-.rsb.open .rsb-buttons a:nth-child(5) {
+.rsb-wrapper.open .rsb-buttons a.rsb-item-5 {
   -webkit-transition-delay: 0.2s;
 }
 
@@ -121,36 +121,36 @@
   Button positions
 ---------------------------------------------------------*/
 /* Top, this is our default and wildcard */
-.rsb.open .rsb-buttons a:nth-child(1) {
+.rsb-wrapper.open .rsb-buttons a.rsb-item-1 {
   -webkit-transform: translateX(-75px) translateY(5px);
 }
-.rsb.open .rsb-buttons a:nth-child(2) {
+.rsb-wrapper.open .rsb-buttons a.rsb-item-2 {
   -webkit-transform: translateX(-53px) translateY(-50px);
 }
-.rsb.open .rsb-buttons a:nth-child(3) {
+.rsb-wrapper.open .rsb-buttons a.rsb-item-3 {
   -webkit-transform: translateX(5px) translateY(-75px);
 }
-.rsb.open .rsb-buttons a:nth-child(4) {
+.rsb-wrapper.open .rsb-buttons a.rsb-item-4 {
   -webkit-transform: translateX(63px) translateY(-50px);
 }
-.rsb.open .rsb-buttons a:nth-child(5) {
+.rsb-wrapper.open .rsb-buttons a.rsb-item-5 {
   -webkit-transform: translateX(85px) translateY(5px);
 }
 
 /* Bottom */
-.rsb.open.bottom .rsb-buttons a:nth-child(1) {
+.rsb-wrapper.open.bottom .rsb-buttons a.rsb-item-1 {
   -webkit-transform: translateX(-75px) translateY(5px);
 }
-.rsb.open.bottom .rsb-buttons a:nth-child(2) {
+.rsb-wrapper.open.bottom .rsb-buttons a.rsb-item-2 {
   -webkit-transform: translateX(-53px) translateY(60px);
 }
-.rsb.open.bottom .rsb-buttons a:nth-child(3) {
+.rsb-wrapper.open.bottom .rsb-buttons a.rsb-item-3 {
   -webkit-transform: translateX(5px) translateY(85px);
 }
-.rsb.open.bottom .rsb-buttons a:nth-child(4) {
+.rsb-wrapper.open.bottom .rsb-buttons a.rsb-item-4 {
   -webkit-transform: translateX(63px) translateY(60px);
 }
-.rsb.open.bottom .rsb-buttons a:nth-child(5) {
+.rsb-wrapper.open.bottom .rsb-buttons a.rsb-item-5 {
   -webkit-transform: translateX(85px) translateY(5px);
 }
 
@@ -161,7 +161,7 @@
 ---------------------------------------------------------*/
 @media 
 (-webkit-min-device-pixel-ratio: 1.5), 
-(min-resolution: 144dpi){ 
+(min-resolution: 144dppx){ 
   .rsb-trigger {
     background-image: url(img/share@2x.png);
     background-size: 18px 27px;
