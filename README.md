@@ -27,29 +27,29 @@ Rsb automatically look for one or several elements with the class rsb to hook on
 
 
 ##Default Settings
-###Global
+__Global__
 * selector _(string)_ - The selector that rsb will look for. __Default:__ '.rsb'.
 * position _(string)_ - Position of the buttons. Available values: 'top', 'bottom'. Invalid values will return 'top'. __Default/Wildcard:__ 'top'.
 * zIndex _(number)_ -  Starting z-index, added so that rsb will be easily compatible with z-index heavy sites. __Default:__ 10.
 
-###Fcaebook
-* facebookShareUrl _(string)_ - The URL that will be shared on Facebook. __Default:__ Current page url (_document.location_).
+__Facebook__
+* facebookShareUrl _(string)_ - The URL that will be shared on Facebook. __Default:__ Current page url.
 
 ###Twitter variables
-* twitterShareUrl _(string)_ - The URL that will be shared on Twitter. __Default:__ Current page url (_document.location_).
-* twitterShareMessage _(string)_ - The actual tweet message. Default: current page title (_document.tile_).
+* twitterShareUrl _(string)_ - The URL that will be shared on Twitter. __Default:__ Current page url.
+* twitterShareMessage _(string)_ - The actual tweet message. Default: current page title.
 * twitterUsername _(string)_ - Will add _"via @twitterUsename"_ to the tweet if set to anything but ''. __Default:__ ''.
 
-###Pinterest variables
-* pinterestShareUrl _(string)_ - The URL that will be shared on Pinterest. __Default:__ Current page url (_document.location_).
-* pinterestDescription _(string)_ - The description of the pin. __Default:__ Current page title (_document.title_).
+__Pinterest variables__
+* pinterestShareUrl _(string)_ - The URL that will be shared on Pinterest. __Default:__ Current page url.
+* pinterestDescription _(string)_ - The description of the pin. __Default:__ Current page title.
 
-###Google+ variables
-* googleplusUrl _(string)_ - The URL that will be shared on Google+. __Default:__ Current page url (_document.location_).
+__Google+ variables__
+* googleplusUrl _(string)_ - The URL that will be shared on Google+. __Default:__ Current page url.
 
-###E-mail variables
-* emailSubject _(string)_ - The subject of the e-mail. __Default:__ current page title (_document.title_).
-* emailMessage _(string)_ - The content of the e-mail. __Default:__ current page url (document.location).
+__E-mail variables__
+* emailSubject _(string)_ - The subject of the e-mail. __Default:__ current page title.
+* emailMessage _(string)_ - The content of the e-mail. __Default:__ current page url.
 * emailTo _(string)_ - Optional default e-mail to send to. __Default:__ ''.
 
 
