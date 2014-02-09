@@ -22,7 +22,8 @@
       
       rsb({
         selector: '.rsb-two',
-        position: 'top'
+        position: 'top',
+        facebookShareUrl: 'https://www.facebook.com/UnderstanditAB'
       });
     });
   </script>
@@ -34,11 +35,22 @@
       padding: 0;
       height: 100%;
       width: 100%;
+      font-family: 'helvetica neue', arial, sans-serif;
     }
     
     body {
       position: relative;
       background-color: #41D9B7;
+    }
+    
+    .intro {
+      background-color: #fff;
+      padding: 20px 20px 0;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
     }
     
     .menu {
@@ -57,12 +69,10 @@
     }
   
     .middle {
-      position: fixed;
+      margin: 50px auto 0;
+      width: 50px;
+      height: 50px;
       padding: 100px;
-      left: 50%;
-      top: 50%;
-      margin-left: -125px;
-      margin-top: -125px;
       background-color: #fff;
       border-radius: 50%;
     }
@@ -71,6 +81,9 @@
   <link rel="stylesheet" href="rsb.css" />
 </head>
 <body>
+  <div class="intro">
+    <h1>rsb demo</h1>
+  </div>
   
   <div class="menu">
     <div class="rsb"></div>

@@ -2,26 +2,25 @@
 var globalUrl = encodeURI(document.location);
 var globalMessage = document.title;
 
-var defaultSettings = {
-  selector: '.rsb',
-  position: 'top',
-  zIndex: 10,
-  facebookShareUrl: globalUrl,
-  twitterShareUrl: globalUrl,
-  twitterShareUrl: globalUrl,
-  twitterShareMessage: globalMessage,
-  twitterUsername: '',
-  pinterestShareUrl: globalUrl,
-  pinterestDescription: globalMessage,
-  googleplusUrl: globalUrl,
-  emailSubject: globalMessage,
-  emailMessage: globalUrl,
-  emailTo: ''
-};
+
   
 var rsb = function(settings) {
-  
-  console.log(settings);
+
+  var defaultSettings = {
+    selector: '.rsb',
+    position: 'top',
+    zIndex: 10,
+    facebookShareUrl: globalUrl,
+    twitterShareUrl: globalUrl,
+    twitterShareMessage: globalMessage,
+    twitterUsername: '',
+    pinterestShareUrl: globalUrl,
+    pinterestDescription: globalMessage,
+    googleplusUrl: globalUrl,
+    emailSubject: globalMessage,
+    emailMessage: globalUrl,
+    emailTo: ''
+  };
   
   settings = $.extend(defaultSettings, settings);
   
@@ -29,7 +28,7 @@ var rsb = function(settings) {
   $(settings.selector).addClass('rsb-wrapper');
   
   /* Append our html code */
-  $(settings.selector).append('<div class="rsb-wrapper"><div class="rsb-trigger"></div><div class="rsb-buttons"><a class="facebook">Facebook</a><a class="twitter">Twitter</a><a class="pinterest">Twitter</a><a class="googleplus">Email</a><a class="email">E-mail</a></div></div>');
+  $(settings.selector).append('<div class="rsb-trigger"></div><div class="rsb-buttons"><a class="facebook">Facebook</a><a class="twitter">Twitter</a><a class="pinterest">Twitter</a><a class="googleplus">Email</a><a class="email">E-mail</a></div>');
   
   
   /* Set main class to determine where the buttons go, working values are top, and bottom. Default is top, any incorrect value will return top */
@@ -58,7 +57,7 @@ var rsb = function(settings) {
   
   /* Link customization */
   /* Twitter */
-  if(settings.twitterUsername != "") {
+  if(settings.twitterUsername != '') {
     settings.twitterUsername = "&via=" + settings.twitterUsername;
   }
   
@@ -76,11 +75,6 @@ var rsb = function(settings) {
   $(settings.selector).find('.rsb-buttons .email').attr('href', "mailto:" + settings.emailTo + "?Subject=" + settings.emailSubject + "&Body=" + settings.emailMessage);
   
   
-  /* Button size for future dynamicness , not in use wright now*/
-  //$('.rsb-trigger').outerWidth(triggerSize).outerHeight(triggerSize);
-  //$('.rsb-buttons a').outerWidth(buttonSize).outerHeight(buttonSize);
-  
-  
   /* Do stuff! */
   $(settings.selector).find('.rsb-trigger').each(function() {
     $(this).click(function() {
@@ -88,4 +82,6 @@ var rsb = function(settings) {
     });
   });
   
+  
+  console.log(settings.globalShareUrl);
 };

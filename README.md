@@ -25,6 +25,25 @@ Lastly add this:
 ```
 Rsb automatically look for one or several elements with the class rsb to hook on to. Of course you can change this, see settings below.
 
+You can include multiple instances of rsb and change settings individually, like this:
+```html
+<script type="text/javascript">
+  rsb({
+    selector: '.myAwesomeClass',
+    position: 'bottom',
+    facebookShareUrl: 'https://www.facebook.com/UnderstanditAB'
+    twitterShareUrl: 'http://understandit.se'
+  });
+  
+  rsb({
+    selector: '.myAwesomeClass2',
+    twitterUsername: 'olofbrickarp',
+    emailSubject: 'Check this out'
+  });
+</script>
+```
+Just make sure that all the selectors exist, in this case _.myAwesomeClass_ and _.myAwesomeClass2_.
+
 
 ##Default Settings
 __Global__
@@ -54,8 +73,9 @@ __E-mail variables__
 
 
 ##ToDo
-* ~~Move settings to a more convenient place~~
-* ~~Give the option of multiple share buttons on a single page with their own settings~~
+* Add globalShareUrl setting to change all share url's at once.
 * Add support for left and right button positions.
 * Add settings for button size and placement.
 * Backward compatibility in older browsers (javascript animations)?
+* ~~Move settings to a more convenient place~~
+* ~~Give the option of multiple share buttons on a single page with their own settings~~
