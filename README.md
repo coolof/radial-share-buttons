@@ -35,7 +35,7 @@ __Global__
 __Facebook__
 * facebookShareUrl _(string)_ - The URL that will be shared on Facebook. __Default:__ Current page url.
 
-###Twitter variables
+__Twitter variables__
 * twitterShareUrl _(string)_ - The URL that will be shared on Twitter. __Default:__ Current page url.
 * twitterShareMessage _(string)_ - The actual tweet message. Default: current page title.
 * twitterUsername _(string)_ - Will add _"via @twitterUsename"_ to the tweet if set to anything but ''. __Default:__ ''.
