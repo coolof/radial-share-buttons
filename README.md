@@ -31,7 +31,7 @@ You can include multiple instances of rsb and change settings individually, like
   rsb({
     selector: '.myAwesomeClass',
     position: 'bottom',
-    facebookShareUrl: 'https://www.facebook.com/UnderstanditAB'
+    facebookShareUrl: 'https://www.facebook.com/UnderstanditAB',
     twitterShareUrl: 'http://understandit.se'
   });
   
