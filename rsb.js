@@ -29,21 +29,10 @@ var emailTo = "";
 
 
 /* Link customization */
-/* Facebook */
-/*if(facebookShareUrl == "") {
-  facebookShareUrl = encodeURI(document.location);
-}*/
-
 /* Twitter */
 if(twitterShowVia == true) {
   twitterUsername = "&via=" + twitterUsername;
 }
-/*if(twitterShareMessage == "") {
-  twitterShareMessage = document.title;
-}
-if(twitterShareUrl == "") {
-  twitterShareUrl = encodeURI(document.location);
-}*/
 
 
 
@@ -62,9 +51,11 @@ var rsb = function(pos) {
   }
   
   
-  /* Add child classes instead of using :nth-child in css. */
-  $('.rsb-buttons a').each(function(i) {
-    $(this).addClass("rsb-"+(i+1));
+  /* Add child classes instead of using :nth-child in css. This could probably look also look at the social media class instead. */
+  $('.rsb-buttons').each(function() {
+    $(this).find('a').each(function(i) {
+      $(this).addClass("rsb-"+(i+1));
+    });
   });
   
   
